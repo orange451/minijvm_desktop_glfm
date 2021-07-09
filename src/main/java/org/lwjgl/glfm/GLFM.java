@@ -1,6 +1,8 @@
 package org.lwjgl.glfm;
 
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.glfw.GLFWCharCallbackI;
+import org.lwjgl.glfw.GLFWKeyCallbackI;
 
 public class GLFM {
     public static final int //
@@ -209,5 +211,26 @@ public class GLFM {
 	
 	public static void glfmPauseVideo(long display, long handle) {
 		System.out.println("glfmPauseVideo not supported by GLFW.");
+	}
+	
+    public static void glfmSetDisplayConfig(long display,
+            int preferredAPI,
+            int colorFormat,
+            int depthFormat,
+            int stencilFormat,
+            int multisample) {
+    	//
+	}
+    
+	public static GLFWCharCallbackI glfmSetCharCallback(long window, GLFWCharCallbackI callback) {
+		return GLFW.glfwSetCharCallback(window, callback);
+	}
+	
+	public static GLFWKeyCallbackI glfmSetKeyCallback(long window, GLFWKeyCallbackI callback) {
+		return GLFW.glfwSetKeyCallback(window, callback);
+	}
+	
+	public static GLFMRenderFuncCallbackI glfmSetRenderFuncCallback(long window, GLFMRenderFuncCallbackI callback) {
+		return callback;
 	}
 }

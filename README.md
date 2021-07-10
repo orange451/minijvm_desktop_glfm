@@ -5,16 +5,16 @@ Stub classes to prevent compilation errors when accessing GLFM from LWJGL applic
 
 Maven
 ```maven
-		<repositories>
-			<repository>
-			    <id>jitpack.io</id>
-			    <url>https://jitpack.io</url>
-			</repository>
-		</repositories>
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
     
-    <dependency>
-      <groupId>com.github.orange451</groupId>
-      <artifactId>minijvm_desktop_glfm</artifactId>
-      <version>1.2</version>
-    </dependency>
+	<dependency>
+		<groupId>com.github.orange451</groupId>
+		<artifactId>minijvm_desktop_glfm</artifactId>
+		<version>1.2</version>
+	</dependency>
 ```

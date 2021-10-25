@@ -231,6 +231,12 @@ public class GLFM {
 	}
 	
 	public static GLFMRenderFuncCallbackI glfmSetRenderFuncCallback(long window, GLFMRenderFuncCallbackI callback) {
+		System.out.println("glfmSetRenderFuncCallback not supported by GLFW.");
+		return callback;
+	}
+	
+	public static GLFMTouchCallbackI glfmSetTouchCallback(long window, GLFMTouchCallbackI callback) {
+		System.out.println("glfmSetTouchCallback not supported by GLFW.");
 		return callback;
 	}
 }

@@ -18,7 +18,7 @@ public abstract class GCallBack {
                 Class<?> c = Class.forName(System.getProperty("gui.driver"));
                 instance = (GCallBack) c.newInstance();
             } catch (Exception e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
         }
         return instance;

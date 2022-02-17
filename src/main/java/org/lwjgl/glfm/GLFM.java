@@ -1,7 +1,9 @@
 package org.lwjgl.glfm;
 
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.glfw.GLFWCharCallback;
 import org.lwjgl.glfw.GLFWCharCallbackI;
+import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.glfw.GLFWKeyCallbackI;
 
 public class GLFM {
@@ -222,21 +224,21 @@ public class GLFM {
     	//
 	}
     
-	public static GLFWCharCallbackI glfmSetCharCallback(long window, GLFWCharCallbackI callback) {
+	public static GLFWCharCallback glfmSetCharCallback(long window, GLFWCharCallbackI callback) {
 		return GLFW.glfwSetCharCallback(window, callback);
 	}
 	
-	public static GLFWKeyCallbackI glfmSetKeyCallback(long window, GLFWKeyCallbackI callback) {
+	public static GLFWKeyCallback glfmSetKeyCallback(long window, GLFWKeyCallbackI callback) {
 		return GLFW.glfwSetKeyCallback(window, callback);
 	}
 	
-	public static GLFMRenderFuncCallbackI glfmSetRenderFuncCallback(long window, GLFMRenderFuncCallbackI callback) {
+	public static GLFMRenderFuncCallback glfmSetRenderFuncCallback(long window, GLFMRenderFuncCallbackI callback) {
 		System.out.println("glfmSetRenderFuncCallback not supported by GLFW.");
-		return callback;
+		return GLFMRenderFuncCallback.createSafe(callback);
 	}
 	
-	public static GLFMTouchCallbackI glfmSetTouchCallback(long window, GLFMTouchCallbackI callback) {
+	public static GLFMTouchCallback glfmSetTouchCallback(long window, GLFMTouchCallbackI callback) {
 		System.out.println("glfmSetTouchCallback not supported by GLFW.");
-		return callback;
+		return GLFMTouchCallback.createSafe(callback);
 	}
 }
